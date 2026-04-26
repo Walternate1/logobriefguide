@@ -1,17 +1,116 @@
 ---
-
+import MainLayout from "../layouts/MainLayout.astro";
+import { siteConfig } from "../config/site";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout
+  title={`${siteConfig.siteName} | Hire a logo designer without wasting money`}
+  description={siteConfig.siteDescription}
+  pathname="/"
+>
+  <section class="hero">
+    <p class="eyebrow">Start here</p>
+    <h1>Hire a logo designer without wasting money.</h1>
+    <p class="lead">
+      Write a better brief, compare your options, and know what files to ask for
+      before you pay. This site exists to help you make a smarter logo decision,
+      not a rushed one.
+    </p>
+    <div class="button-row">
+      <a class="button" href="/logo-brief-template/">Use the brief template</a>
+      <a class="button-secondary" href="/ai-vs-fiverr-vs-agency/">Compare your options</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card-grid">
+      <article class="card">
+        <p class="eyebrow">Step 1</p>
+        <h2>Write a better brief</h2>
+        <p>
+          Most bad logo outcomes start with a vague brief. Start with a structure
+          that helps a designer understand your business, audience, style, and
+          deliverables.
+        </p>
+        <p><a href="/logo-brief-template/">Open the template →</a></p>
+      </article>
+      <article class="card">
+        <p class="eyebrow">Step 2</p>
+        <h2>Choose the right path</h2>
+        <p>
+          AI, Fiverr, and agencies can all be the right answer depending on your
+          budget, speed, and brand stakes.
+        </p>
+        <p><a href="/ai-vs-fiverr-vs-agency/">See the comparison →</a></p>
+      </article>
+      <article class="card">
+        <p class="eyebrow">Step 3</p>
+        <h2>Know what to ask for</h2>
+        <p>
+          A logo is not just a picture file. Ask for the right deliverables so
+          you do not end up paying twice later.
+        </p>
+        <p><a href="/what-files-should-i-ask-for/">See the file checklist →</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section two-col">
+    <div class="soft-card">
+      <p class="eyebrow">Quick decision guide</p>
+      <h2>Which route fits you?</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Option</th>
+            <th>Best when</th>
+            <th>Not ideal when</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AI</td>
+            <td>You need something fast and very cheap.</td>
+            <td>You want custom thinking or strong refinement.</td>
+          </tr>
+          <tr>
+            <td>Fiverr</td>
+            <td>You want a human designer on a smaller budget.</td>
+            <td>You want deep brand strategy.</td>
+          </tr>
+          <tr>
+            <td>Agency</td>
+            <td>Your brand matters a lot and budget is larger.</td>
+            <td>You only need a basic starter logo.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:16px;"><a href="/ai-vs-fiverr-vs-agency/">Read the full comparison →</a></p>
+    </div>
+
+    <div class="soft-card">
+      <p class="eyebrow">Avoid these mistakes</p>
+      <h2>Common ways buyers waste money</h2>
+      <ul class="checklist">
+        <li>Starting without a real brief</li>
+        <li>Paying before deliverables are clear</li>
+        <li>Forgetting vector/source files</li>
+        <li>Picking based on style alone</li>
+        <li>Not thinking about logo usage first</li>
+      </ul>
+      <p style="margin-top:16px;"><a href="/logo-designer-red-flags/">See the red flags →</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="prose">
+      <p class="eyebrow">Best place to start</p>
+      <h2>If you do one thing first, do this.</h2>
+      <p>
+        Use the logo brief template before you compare designers. A better brief
+        usually improves the result more than spending blindly.
+      </p>
+      <p><a class="button" href="/logo-brief-template/">Start the brief template</a></p>
+    </div>
+  </section>
+</MainLayout>

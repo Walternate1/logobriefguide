@@ -1,0 +1,12 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Page Not Found" pathname="/404/" noindex={true}>
+  <section class="prose">
+    <p class="eyebrow">404</p>
+    <h1>Page not found.</h1>
+    <p>The page you wanted is not here.</p>
+    <p><a class="button" href="/">Go home</a></p>
+  </section>
+</MainLayout>

@@ -1,0 +1,15 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { siteConfig } from "../config/site";
+---
+
+<MainLayout title="Contact | Logo Brief Guide" pathname="/contact/">
+  <section class="prose">
+    <p class="eyebrow">Contact</p>
+    <h1>Contact</h1>
+    <p>
+      For questions about the site, contact:
+      <a href={`mailto:${siteConfig.supportEmail}`}>{siteConfig.supportEmail}</a>
+    </p>
+  </section>
+</MainLayout>
