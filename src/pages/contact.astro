@@ -3,13 +3,47 @@ import MainLayout from "../layouts/MainLayout.astro";
 import { siteConfig } from "../config/site";
 ---
 
-<MainLayout title="Contact | Logo Brief Guide" pathname="/contact/">
+<MainLayout
+  title="Contact | Logo Brief Guide"
+  description="Contact Logo Brief Guide."
+  pathname="/contact/"
+>
   <section class="prose">
     <p class="eyebrow">Contact</p>
     <h1>Contact</h1>
+
     <p>
-      For questions about the site, contact:
+      For questions about the site, use the email below.
+    </p>
+
+    <p>
+      <strong>Email:</strong>
       <a href={`mailto:${siteConfig.supportEmail}`}>{siteConfig.supportEmail}</a>
+    </p>
+
+    <p>
+      This inbox is intended for site-related questions, feedback, corrections,
+      and basic partnership inquiries.
+    </p>
+
+    <h2>Good reasons to reach out</h2>
+    <ul>
+      <li>Reporting a broken link or outdated page</li>
+      <li>Requesting a correction</li>
+      <li>Asking a site-related question</li>
+      <li>Affiliate or partnership questions</li>
+    </ul>
+
+    <h2>Please do not send</h2>
+    <ul>
+      <li>Unsolicited sales spam</li>
+      <li>Sensitive personal information</li>
+      <li>Large attachments unless requested</li>
+    </ul>
+
+    <p>
+      If your message is about privacy, you can also use this same email and
+      include “Privacy” in the subject line.
     </p>
   </section>
 </MainLayout>
